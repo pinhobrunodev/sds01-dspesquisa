@@ -33,7 +33,7 @@ public class RecordMapper {
 		 * 
 		 * NOME:BRUNO
 		 * AGE:21
-		 * PLATFORM: PC (0)
+		 * PLATFORM: PC (0) 
 		 * GAME: CSGO (1)
 		 * => PC(0) CSGO (1) , O GENRE ASSOCIADO A PLATAFORMA(0) , NOME DO JOGO(1) =>  GENRE =  SHOOTER(1)
 		 */
