@@ -1,4 +1,4 @@
-package com.devsuperior.dspesquisa.entities;
+ package com.devsuperior.dspesquisa.entities;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -14,7 +14,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dspesquisa.entities.enums.Platform;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "tb_game")
@@ -27,13 +26,14 @@ public class Game implements Serializable {
 	private Long id;
 	private String title;
 	private Platform platform;
-
+	
+	//@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 	
 	
-	@JsonIgnore
+	//@JsonIgnore
 	@OneToMany(mappedBy = "game")
 	private Set<Record> records = new HashSet<>();
 
@@ -71,7 +71,8 @@ public class Game implements Serializable {
 	public void setPlatform(Platform platform) {
 		this.platform = platform;
 	}
-
+	
+	
 	public Genre getGenre() {
 		return genre;
 	}
