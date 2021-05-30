@@ -1,18 +1,21 @@
 package com.devsuperior.dspesquisa.dto;
 
+import java.io.Serializable;
+
 import com.devsuperior.dspesquisa.entities.Game;
 import com.devsuperior.dspesquisa.entities.enums.Platform;
 
-public class GameDTO {
+public class GameDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String title;
 	private Platform platform;
-	
+
 	public GameDTO() {
-		
+
 	}
-	
+
 	public GameDTO(Game entity) {
 		id = entity.getId();
 		title = entity.getTitle();
@@ -42,7 +45,5 @@ public class GameDTO {
 	public void setPlatform(Platform platform) {
 		this.platform = platform;
 	}
-	
-	
-	
+
 }
